@@ -1,0 +1,35 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`hola-mundo`
+Muestra un mensaje de Hola Mundo
+
+@demo demo/index.html 
+-->
+
+<dom-module id="hola-mundo">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'hola-mundo',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'hola-mundo',
+        },
+      },
+
+    });
+  </script>
+</dom-module>

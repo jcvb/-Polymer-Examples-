@@ -1,0 +1,44 @@
+<!-- html import-->
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="./nombre-holamundo.html">
+<dom-module id="hola-mundo">
+  <template>
+    <style>
+      :host{
+        display: block;
+      }
+      paper-button{
+        background-color: var(--paper-red-500);
+        color: white;
+      }
+    </style>
+    <paper-button raised>Enviar</paper-button>
+    <h1 id="titulo">Hola [[name]] tienes [[ edad ]]</h1>
+  </template>
+  <script>
+    Polymer({
+      is: "hola-mundo",
+      properties:{
+        name: {
+          type: Boolean,
+          value: 'false'
+        }, 
+        edad: {
+          type: Number,
+          value: 12
+        }
+      },
+      created: function(){
+        
+      }, 
+      ready: function(){
+        setTimeout(()=>{
+          this.name = 'otro valor';
+        },3000);
+      },
+      attached: function(){
+
+      }
+    })
+  </script>
+</dom-module> 

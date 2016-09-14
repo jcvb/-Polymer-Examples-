@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>hola-mundo test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../hola-mundo.html">
+  </head>
+  <body>
+
+    <test-fixture id="basic">
+      <template>
+        <hola-mundo></hola-mundo>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('hola-mundo', function() {
+
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'hola-mundo');
+        });
+
+      });
+    </script>
+  </body>
+</html>
