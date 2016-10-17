@@ -1,0 +1,6 @@
+{
+  "name": "baches",
+  "short_name": "baches",
+  "start_url": "/",
+  "display": "standalone"
+}
